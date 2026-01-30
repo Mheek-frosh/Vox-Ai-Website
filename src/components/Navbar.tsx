@@ -17,9 +17,12 @@ export const Navbar = ({ onDownload }: { onDownload: () => void }) => {
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4 glass-morphism' : 'py-6'}`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                    <img src={logo} alt="Vox AI Logo" className="w-10 h-10 object-contain drop-shadow-lg" />
-                    <span className="text-2xl font-bold tracking-tight text-white">Vox <span className="text-vox-purple">AI</span></span>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                    <img src={logo} alt="Vox AI Logo" className="w-10 h-10 object-contain drop-shadow-lg transition-transform group-hover:scale-110" />
+                    <div className="flex flex-col">
+                        <span className="text-2xl font-bold tracking-tight text-white leading-none">Vox <span className="text-vox-purple">AI</span></span>
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-semibold mt-1">Intelligent Operations</span>
+                    </div>
                 </div>
 
                 <div className="hidden md:flex items-center gap-8">
