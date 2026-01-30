@@ -44,8 +44,8 @@ export const Features = () => {
     return (
         <section id="features" className="py-24 relative overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">Core Features</h2>
+                <div className="text-center mb-16 underline decoration-vox-purple/30 underline-offset-8">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">Powerful Features</h2>
                     <p className="text-white/60 max-w-2xl mx-auto">Built to support your creative flow and daily operations.</p>
                 </div>
 

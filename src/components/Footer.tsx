@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mic, Github, Twitter, Instagram, Mail, Linkedin } from 'lucide-react';
 import { Button } from './ui/Button';
+import logo from '../assets/logo.png';
 
 export const Footer = () => {
     return (
@@ -9,9 +10,7 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-2 mb-6">
-                            <div className="w-8 h-8 rounded-full bg-vox-purple flex items-center justify-center">
-                                <Mic className="text-white w-5 h-5" />
-                            </div>
+                            <img src={logo} alt="Vox AI Logo" className="w-8 h-8 object-contain" />
                             <span className="text-xl font-bold text-white">Vox AI</span>
                         </div>
                         <p className="text-white/50 max-w-sm mb-8 leading-relaxed">

@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 import { Apple, PlayCircle, Mic } from 'lucide-react';
+import logo from '../assets/logo.png'; // Resolved module error by adding tsconfig.json and typescript dependency
 
-export const Hero = () => {
+export const Hero = ({ onDownload }: { onDownload: () => void }) => {
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-vox-purple/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
-                <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-vox-dark/30 rounded-full blur-[100px] mix-blend-screen animate-gradient-xy" />
+                <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-vox-cyan/20 rounded-full blur-[100px] mix-blend-screen animate-gradient-xy" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10 text-center">
@@ -30,16 +31,16 @@ export const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-                        <Button size="lg" className="gap-3">
-                            <Apple className="w-5 h-5" /> Download on AppStore
+                        <Button size="lg" className="gap-3" onClick={onDownload}>
+                            <Apple className="w-5 h-5" /> Download Now
                         </Button>
-                        <Button size="lg" variant="outline" className="gap-3">
+                        <Button size="lg" variant="outline" className="gap-3" onClick={onDownload}>
                             <PlayCircle className="w-5 h-5" /> Get it on PlayStore
                         </Button>
                     </div>
                 </motion.div>
 
-                {/* Central Orb Mockup */}
+                {/* Central vox mockup */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -55,10 +56,10 @@ export const Hero = () => {
                                     borderRadius: ["40%", "50%", "40%"]
                                 }}
                                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                                className="w-48 h-48 bg-linear-to-tr from-vox-purple via-vox-accent to-vox-dark blur-2xl opacity-50"
+                                className="w-48 h-48 bg-linear-to-tr from-vox-purple via-vox-cyan to-vox-dark blur-2xl opacity-50"
                             />
                             <div className="z-10 text-center">
-                                <Mic className="w-20 h-20 text-white mb-4 mx-auto animate-float" />
+                                <img src={logo} alt="Vox AI Logo" className="w-32 h-32 mb-4 mx-auto animate-float drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]" />
                                 <p className="text-white/80 font-mono">"Vox, schedule my meeting for 2 PM"</p>
                             </div>
                         </div>
