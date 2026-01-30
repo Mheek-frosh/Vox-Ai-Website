@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vox-bg: #050505;
+  --color-vox-purple: #a855f7;
+  --color-vox-dark: #1e1b4b;
+  --color-vox-accent: #c084fc;
+
+  --font-sans: "Inter", sans-serif;
+
+  --animate-gradient-x: gradient-x 15s ease infinite;
+  --animate-gradient-y: gradient-y 15s ease infinite;
+  --animate-gradient-xy: gradient-xy 15s ease infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes gradient-y {
+
+    0%,
+    100% {
+      background-size: 400% 400%;
+      background-position: center top;
+    }
+
+    50% {
+      background-size: 200% 200%;
+      background-position: center center;
+    }
+  }
+
+  @keyframes gradient-x {
+
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  @keyframes gradient-xy {
+
+    0%,
+    100% {
+      background-size: 400% 400%;
+      background-position: left center;
+    }
+
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply bg-white/3 backdrop-blur-md border border-white/5;
+  }
+
+  .glow-shadow {
+    box-shadow: 0 0 50px -12px rgba(168, 85, 247, 0.5);
+  }
+
+  .text-gradient {
+    @apply bg-linear-to-r from-white to-vox-purple bg-clip-text text-transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-vox-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-vox-dark rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-vox-purple;
+}
