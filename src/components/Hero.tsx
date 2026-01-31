@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Apple, PlayCircle, Mic } from 'lucide-react';
+import { Apple, PlayCircle } from 'lucide-react';
 import logo from '../assets/logo.png'; // Resolved module error by adding tsconfig.json and typescript dependency
 
 export const Hero = ({ onDownload }: { onDownload: () => void }) => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+        <section id="home" className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-vox-purple/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />

@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MobileDashboard } from './MobileDashboard';
 import { MobileVoiceUI } from './MobileVoiceUI';
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const AppScreens = () => {
     const [activeScreen, setActiveScreen] = useState(0);
@@ -57,4 +56,3 @@ export const AppScreens = () => {
     );
 };
 
-import { AnimatePresence } from 'framer-motion';
