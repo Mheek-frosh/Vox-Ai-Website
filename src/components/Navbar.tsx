@@ -1,6 +1,6 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Menu, X, Mic } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/Button';
 import logo from '../assets/logo.png';
 

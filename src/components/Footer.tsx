@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
-import { Mic, Github, Twitter, Instagram, Mail, Linkedin } from 'lucide-react';
-import { Button } from './ui/Button';
+import { Github, Twitter, Instagram, Mail, Linkedin } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 export const Footer = () => {

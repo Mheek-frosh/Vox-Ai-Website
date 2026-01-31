@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Check, Zap, Shield, Globe } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Button } from './ui/Button';
 
 const plans = [
